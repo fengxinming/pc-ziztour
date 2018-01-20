@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>系统操作便捷效率高</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-11.7%" y="-8.3%" width="123.3%" height="123.3%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="智慧旅游-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1160.000000, -1307.000000)" opacity="0.800000012">
+        <g id="闪电" filter="url(#filter-1)" transform="translate(1160.000000, 1307.000000)" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="2">
+            <path d="M32.9356436,24.301477 L38.7128699,4.69127225 C38.8689428,4.16149898 38.5659987,3.60551087 38.0362254,3.44943804 C37.688338,3.34694933 37.3122281,3.44084813 37.053335,3.6948244 L10.3384582,29.902335 C9.94420812,30.2890975 9.93813825,30.9222334 10.3249008,31.3164836 C10.4638412,31.4581137 10.6417712,31.5552132 10.836055,31.5954291 L25.0643564,34.5406283 L19.2871301,54.150833 C19.1310572,54.6806063 19.4340013,55.2365944 19.9637746,55.3926672 C20.311662,55.4951559 20.6877719,55.4012571 20.946665,55.1472809 L46.3230835,30.2528087 C47.1115838,29.4792835 47.1237235,28.2130118 46.3501984,27.4245115 C46.0723177,27.1412512 45.7164576,26.9470523 45.32789,26.8666204 L32.9356436,24.301477 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

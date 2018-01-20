@@ -15,7 +15,7 @@ module.exports = (src, dest) => {
       'include css': true,
       compress: true,
       use: stylusConfig.use,
-      import: stylusConfig.import,
+      import: [nativePath.join(require.resolve('nib').slice(0, -3), 'index.styl')].concat(stylusConfig.import.slice(1)),
       globals: stylusConfig.define,
       url: {
         name: 'inline-url',

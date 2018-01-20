@@ -26,7 +26,7 @@
           color: #FFFFFF
           letter-spacing: 4px
           line-height: 70px
-          text-shadow: 0 2px 4px rgba(0,0,0,0.18)
+          text-shadow 0 2px 4px rgba(0,0,0,0.18)
           font-weight 600
         p
           line-height 30px
@@ -62,32 +62,17 @@
     width $pageWidth
     margin 0 auto
 
-    .headline
-      margin 0 auto
-      width 1120px
-      h2
-        font-size: 36px
-        color: #333
-        line-height: 42px
-        font-weight 600
-      p
-        opacity: 0.8
-        font-size: 20px
-        color: #333
-
     .part-01
       background url($CDN_PATH/images/tech-travel/categories-tree.png) no-repeat center 310px
       padding 130px 0 0 0
       height 1130px
-    .part-02
-      background url($CDN_PATH/images/tech-travel/solution.png) no-repeat center 180px
-      background-size contain
-      height 1190px
     .part-03
-      height 650px
-      background url($CDN_PATH/images/tech-travel/supports-bg.png) no-repeat 787px 80px
+      padding 66px 0
+      height 494px
+      background url($CDN_PATH/images/tech-travel/supports-bg.png) no-repeat 787px 120px
       .list
         width 683.5px
+        margin-top 40px
         li
           height 90px
           line-height @height
@@ -108,3 +93,28 @@
             display inline-block
             min-width 80px
             font-weight 600
+
+  .headline
+    margin 0 auto
+    width 1120px
+    h2
+      font-size: 36px
+      color: #333
+      line-height: 42px
+      font-weight 600
+    p
+      opacity: 0.8
+      font-size: 20px
+      color: #333
+
+  .part-02
+    background url($CDN_PATH/images/tech-travel/solution-bg.png) no-repeat center top
+    background-size cover
+    height 992px
+    padding 66px 0
+    .wrapper
+      width $pageWidth
+      margin 0 auto
+      height 100%
+      background url($CDN_PATH/images/tech-travel/solution.png) no-repeat center 180px
+      background-size contain
