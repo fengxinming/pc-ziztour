@@ -8,7 +8,7 @@ const { NODE_ENV } = utils;
 const config = {
   output: {
     filename: '[name].js',
-    chunkFilename: '[id].chunk.[hash:8].js'
+    chunkFilename: '[id].chunk.js'
   },
   performance: {
     hints: NODE_ENV === 'production' ? 'warning' : false,
@@ -29,24 +29,6 @@ const config = {
       include: [utils.resolve('client', 'js')],
       exclude: file => !!file.match(/node_modules/)
     }, {
-      test: /\.(ico|png|jpe?g|gif|svg)(\?.*)?$/,
-      use: [{
-        loader: 'url-loader',
-        options: {
-          limit: 30000,
-          name: '/images/[name].[hash:8].[ext]'
-        }
-      }]
-    }, {
-      test: /\.(woff|woff2|eot|ttf|otf)$/,
-      include: [utils.resolve('public', 'fonts')],
-      use: [{
-        loader: 'file-loader',
-        options: {
-          name: '/fonts/[name].[hash:8].[ext]'
-        }
-      }]
-    }, {
       test: /\.pug$/,
       use: ['pug-loader']
     }]
@@ -55,7 +37,7 @@ const config = {
   plugins: [
     // new webpack.ProvidePlugin({
     // }),
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    // new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     // 全局属性
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(NODE_ENV),

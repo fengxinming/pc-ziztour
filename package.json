@@ -14,7 +14,7 @@
   "dependencies": {
     "autoprefixer": "^7.2.4",
     "chalk": "^2.3.0",
-    "danu": "^1.0.3",
+    "danu": "^1.0.5",
     "koa": "^2.4.1",
     "nib": "^1.1.2",
     "poststylus": "^1.0.0"

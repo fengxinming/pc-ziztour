@@ -12,11 +12,11 @@ module.exports = (src) => {
       })
       .on('error', (err) => {
         gutil.log('Running "clean" task but throw a Error', err);
-        reject(evt);
+        setTimeout(reject, 100, evt);
       })
       .on('end', () => {
         gutil.log('Finished "clean" task');
-        resolve();
+        setTimeout(resolve, 100);
       })
       .pipe(clean());
   });

@@ -12,7 +12,8 @@ module.exports = {
   DYN_JS_PATH: '/js/',
   CONTEXT_PATH: '',
   PC_TRAVEL_PATH: 'http://b.ziztour.com',
-  CDN_PATH: 'http://img.ziztour.com/static',
+  CDN_PATH: 'http://img.ziztour.com/static/www',
+  // CDN_PATH: '',
   NAV: [{
     name: '首页',
     path: '/',
@@ -20,7 +21,7 @@ module.exports = {
     name: '蜘蛛差旅',
     path: '/travel/index.html'
   }, {
-    name: '智慧旅游',
+    name: '蜘蛛智游行',
     path: '/tech-travel/index.html'
   }, {
     name: '关于我们',

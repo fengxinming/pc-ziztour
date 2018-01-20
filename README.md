@@ -1,13 +1,13 @@
 # 新版PC官网
 
-> Note: `pc-ziztour`支持ie9+及现代浏览器
+> Note: `pc-ziztour`支持ie8+及现代浏览器
 
 <br/>
 
 ## 如何获取代码
 
 ```bash
-$ git@github.com:fengxinming/pc-ziztour.git
+$ git@gitlab.ziztour.loc/portal/pc-ziztour.git
 $ cd pc-ziztour
 $ cnpm install
 ```

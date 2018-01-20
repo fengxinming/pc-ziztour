@@ -16,8 +16,8 @@ block content
       .title-img
         img(src=CDN_PATH + "/images/home/title.svg",alt=TITLE)
       .link-nav
-        a.link-button(href="/travel/index.html") 蜘蛛差旅
-        a.link-button(href="tech-travel/index.html") 蜘蛛智游行
+        a.link-button(href="/travel/index.html", target='_blank') 蜘蛛差旅
+        a.link-button(href="tech-travel/index.html", target='_blank') 蜘蛛智游行
 
       ul.referral-wrap
         each val, index in referrals
@@ -30,7 +30,9 @@ block content
     .content-wrap
       .resource-wrap
         .resource-content.global-center
-          img(src=CDN_PATH + "/images/home/resource.svg",alt=TITLE)
+          .platform-resource
+            img(src=CDN_PATH + "/images/home/resource.svg",alt=TITLE)
+            .line-1px
           ul.resource-list
             each val, index  in resourceList1
               li.resource-details
@@ -57,7 +59,7 @@ block content
             .line-1px
           .travel-wrap
             .float-right
-              a.link-button(href="/travel/index.html") 了解详情
+              a.link-button(href="/travel/index.html", target='_blank') 了解详情
               a.link-button(href="http://b.ziztour.com/guide/login.html" target="_blank") 免费注册
             h2 蜘蛛差旅
             h5 节省20%差旅费用 一站式解决企业差旅管理难题
@@ -106,7 +108,7 @@ block content
                   p.company-text 差旅费用公司月结，先用再结算，不用员工垫付。非差旅类申请借款报销，贴心无压力。
 
           .parade-wrap
-            a.link-button.float-right(href="/tech-travel/index.html") 了解详情
+            a.link-button.float-right(href="/tech-travel/index.html", target='_blank') 了解详情
             h2 蜘蛛智游行
             h5 全域旅游智慧解决方案
             ul.parade-list
@@ -114,11 +116,11 @@ block content
                 .parade-title-img
                   img(src=CDN_PATH + "/images/home/parade-1.png")
                 .parade-guide
-                  h3 直连游客和分销商
+                  h3 直连游客和商家
                   h4 APP\PC\微信商城  API对接OTA
                   .line-1px
                   p.parade-text 专为旅游资源供应商设计的一站式全域旅游电商交易平台，支持景区、酒店、餐厅和旅游特产的前台预订和后台管理。
-                  a.link-button(href="/tech-travel/services.html") 了解更多
+                  a.link-button(href="/tech-travel/services.html", target='_blank') 了解更多
               li.parade-details
                 .parade-title-img
                   img(src=CDN_PATH + "/images/home/parade-2.png")
@@ -127,7 +129,7 @@ block content
                   h4 终端直采 成本低
                   .line-1px
                   p.parade-text 专为旅游供应商和渠道分销商便捷交易设计的全域旅游采购分销管理平台，一站式终端采购目的地旅游资源。
-                  a.link-button(href="/tech-travel/services/distribution.html") 了解更多
+                  a.link-button(href="/tech-travel/services/distribution.html", target='_blank') 了解更多
               li.parade-details
                 .parade-title-img
                   img(src=CDN_PATH + "/images/home/parade-3.png")
@@ -135,14 +137,14 @@ block content
                   h3 行业监测 智慧管理
                   h4 统营统销 全域旅游
                   .line-1px
-                  p.parade-text 专为政府公共服务设计的旅游产业云平台系统，搭建大数据中心和产业服务中心，设计统一的目的地预订运营分销管理平台。
-                  a.link-button(href="/tech-travel/services/government.html") 了解更多
+                  p.parade-text 专为旅游行业运营管理而设计的全域旅游综合运营管理平台，搭建大数据中心和产业服务中心，统营统销，智慧管理。
+                  a.link-button(href="/tech-travel/services/government.html", target='_blank') 了解更多
       .about-wrap
         .banner-img
           img(src=CDN_PATH + "/images/home/about-us.png")
         .about-content
           .product-title
-            img(src=CDN_PATH + "/images/home/about-title.png")
+            img(src=CDN_PATH + "/images/home/about-title.svg")
             .line-1px
 
           -
@@ -157,7 +159,7 @@ block content
                 msg: "旅游创新企业50强"
               },{
                 title: "政府合作",
-                msg: "百亿资金打造全域旅游平台"
+                msg: "千万资金打造全域旅游平台"
               }] ;
 
           ul.about-list
@@ -167,7 +169,7 @@ block content
                 h5= item.title
                 h6= item.msg
 
-          a.link-button.float-right(href="/others/index.html") 更多
+          a.link-button.float-right(href="/others/index.html", target='_blank') 更多
       .partner-wrap
         .partner-content.global-center
           .product-title

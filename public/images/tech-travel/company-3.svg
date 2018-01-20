@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="58px" viewBox="0 0 58 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>财报一目了然</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-12.1%" y="-8.6%" width="124.1%" height="124.1%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="智慧旅游-copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-848.000000, -1313.000000)" opacity="0.800000012">
+        <g id="Group-20" filter="url(#filter-1)" transform="translate(848.000000, 1313.000000)" stroke="#FFFFFF" stroke-width="2">
+            <rect id="Rectangle-14" x="9.7" y="27.2856061" width="7.90833333" height="17.8166667" rx="3.95416667"></rect>
+            <rect id="Rectangle-14-Copy" x="24.1121212" y="15.5757576" width="7.90833333" height="29.5265152" rx="3.95416667"></rect>
+            <rect id="Rectangle-14-Copy-2" x="39.425" y="4.76666667" width="7.90833333" height="40.3356061" rx="3.95416667"></rect>
+            <path d="M7.25,53.55 L51.7166667,53.55" id="Line" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>

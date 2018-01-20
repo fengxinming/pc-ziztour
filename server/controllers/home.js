@@ -10,11 +10,11 @@ module.exports = {
       title: '海量目的地资源',
       msg: '终端直采 成本低'
     }, {
-      title: '全网销售 多渠道平台',
+      title: '全网销售 多终端渠道',
       msg: '微信商城 APP PC &nbsp; API对接OTA'
     }, {
       title: '覆盖差旅 定制 个人游用户',
-      msg: '为1000+企业提供差旅管理服务'
+      msg: '为3500+企业提供差旅管理服务'
     }, {
       title: '信用采购 差旅月结',
       msg: '优化公司现金流收益'
@@ -42,7 +42,7 @@ module.exports = {
       count: '1',
       type: '政府合作'
     }, {
-      link:'#business-anchor',
+      link: '#business-anchor',
       count: '更多',
       type: '商务合作'
     }];
