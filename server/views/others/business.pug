@@ -1,0 +1,44 @@
+extends ./index
+
+block css
+  link(rel='stylesheet', type='text/css', href=`${CONTEXT_PATH}/css/others/business.css?v=${VERSION}`)
+
+block otherNav
+  +otherNav(4)
+
+block substance
+  h1 商务合作
+  .underline
+  .wrapper
+    .yui3-g
+      .yui3-u-1-2
+        .item
+          h2 蜘蛛差旅
+          p 欢迎酒店/航司客户洽谈合作
+          .underline
+          ul
+            li
+              label 联系人：
+              span 汪先生 
+            li
+              label 联系电话：
+              span 135 1098 6820
+            li
+              label 电子邮箱： 
+              span tonyw@ziztour.com
+      .yui3-u-1-2
+        .item
+          h2 蜘蛛智游行
+          p 欢迎景区/酒店/餐厅/购物商超洽谈合作
+          .underline
+          ul
+            li
+              label 联系人：
+              span 谢先生 
+            li
+              label 联系电话：
+              span 189 3868 8367
+            li
+              label 电子邮箱： 
+              span kainx@ziztour.com
+

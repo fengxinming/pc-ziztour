@@ -1,0 +1,29 @@
+// 全局样式
+@require "./partials/layout"
+
+.substance
+  background inline-url('/images/others/experiences/main-bg.svg') no-repeat 30px bottom
+  height 640px
+
+  .wrapper
+    position relative
+
+    ul
+      position absolute
+      &.past-2014
+        top 460px
+        left 638px
+      &.past-2015
+        top: 372px
+        left: 456px
+      &.past-2016
+        top: 234px
+        left: 408px
+      &.past-2017
+        top: 140px
+        left: 530px
+      li
+        font-size: 14px
+        color: #333333
+        height @font-size + 10
+        line-height @height

@@ -1,0 +1,190 @@
+// 全局样式
+@require "../partials/global"
+
+// 布局样式
+@require "../partials/layout"
+
+#app
+    width 100%
+    text-align center
+    .banner-wrap
+        position relative
+        width 100%
+        text-align center
+        .banner-img
+            width 100%
+            min-height 600px
+            background inline-url("/images/tech-travel/banner-s.jpg") no-repeat
+            background-size 100% 100%
+            &>img
+                width 100%
+        .title-img
+            position absolute
+            width 100%
+            top 25%
+            &>img
+                width 560px
+        .link-nav
+            position absolute
+            width 100%
+            top 60%
+            .link-button:first-child
+                link-button(136,42,#000,18,100,#fff,#E8E8E8)
+                margin-right 64px
+            .link-button:last-child
+                link-button(136,42,#fff,18,100,#0ABBB9,#0A9290)
+    .content-wrap
+        width 100%
+        .commerce-terrace-wrap
+            width 100%
+            background-color: #fff
+            .commerce-terrace
+                padding 80px 0 61px
+                .title-img > img
+                    width 557px
+                .referral-list
+                    width 100%
+                    margin 129px 0 110px
+                    color #fff
+                    .referral-details
+                        display inline-block
+                        overflow hidden
+                        margin-right 53px
+                        width 260px
+                        height 380px
+                        vertical-align top
+                        background-size 100% 100%
+                        &:nth-of-type(1)
+                            background url($CDN_PATH + "/images/tech-travel/referral-1.png") no-repeat
+                        &:nth-of-type(2)
+                            background url($CDN_PATH + "/images/tech-travel/referral-2.png") no-repeat
+                        &:nth-of-type(3)
+                            background url($CDN_PATH + "/images/tech-travel/referral-3.png") no-repeat
+                        &:nth-of-type(4)
+                            background url($CDN_PATH + "/images/tech-travel/referral-4.png") no-repeat
+                            margin-right 0
+                        &:hover
+                            .details-content
+                                background rgba(#00ACAA,.9)
+                                transform translateY(0)
+                                .details-title
+                                    transform translateY(0)
+                                .details-msg
+                                    transform rotateY(0deg)
+                                    opacity 1\0/
+                        .details-content
+                            width 100%
+                            height 100%
+                            transform translateY(40px)
+                            transition .5s
+                            .icon-img>img
+                                    margin-top 44px
+                                    width 50px
+                                    height 50px
+                            .details-title
+                                transform translateY(30px)
+                                transition .5s transform
+                                margin-top 30px
+                                &>h2
+                                    font-size: 20px;
+                                    line-height 28px
+                                    text-shadow: 2px 3px 4px rgba(0,0,0,0.19);
+                                &>h5
+                                    margin-top 8px
+                                    opacity: 0.7;
+                                    font-size: 16px;
+                                    text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+                            .details-msg
+                                text-align left
+                                margin 21px 29px 0
+                                font-size: 14px;
+                                transform rotateY(90deg)
+                                opacity 0\0/
+                                transition .5s transform
+                .link-nav
+                    text-align center
+                    .link-button
+                        link-button(120,40,#fff,16,2,#0ABBB9,#0A9290)
+        .trade-guide-wrap
+            width 100%
+            background url($CDN_PATH + "/images/tech-travel/trade.png") no-repeat
+            background-size 100% 100%
+            .trade-guide
+                padding 104px 0 71px
+                color #333
+                .title-img>img
+                    width 362px
+                .guide-list
+                    width 100%
+                    margin 104px 0 109px
+                    .guide-details
+                        overflow hidden
+                        vertical-align top
+                        width 240px
+                        height 336px
+                        display inline-block
+                        &:not(:last-child )
+                            margin-right 80px
+                        &:hover
+                            .details-content
+                                color #fff
+                                transform translateY(-132px)
+                                background #0ABBB9\0/
+                                background-image: linear-gradient(-45deg, rgba(#5CFFFE,.85) 0%, rgba(#0ABBB9,.85) 100%);
+                                &>h2
+                                    font-size 22px
+                                &>h5
+                                    font-size 16px
+                                &>p
+                                    opacity 1
+                        .guide-img
+                            width 100%
+                            height 232px
+                            &>img
+                                width 100%
+                        .details-content
+                            width 100%
+                            height 236px
+                            box-sizing border-box
+                            background-color: #d3d9d8
+                            transition .5s
+                            text-align left
+                            padding 15px 0 0 18px
+                            &>h2
+                                font bold 20px/28px $fontFamily ;
+                            &>h5
+                                font-size 14px
+                                opacity .8
+                                line-height: 22px;
+                                margin-bottom 12px
+                            &>p
+                                opacity 0
+                                text-align left
+                                font-size 14px
+                                line-height: 24px;
+                .link-guide
+                    color rgba(#fff,.8)
+                    font-size 14px
+                    .link-button
+                        margin-top 22px
+                        link-button(120,40,#fff,16,2,#0ABBB9,#0A9290)
+
+        .wit-travel-wrap
+            width 100%
+            background url($CDN_PATH + "/images/tech-travel/mapbg.png") no-repeat
+            background-size 100% 100%
+            .wit-travel
+                padding 65px 0 95px
+                .title-img>img
+                    width 484px
+                .main-img
+                    margin 95px 0 115px
+                    &>img
+                        width 1051px
+                .link-button:first-child
+                    link-button(120,40,#0ABBB9,16)
+                    margin-right 30px
+                .link-button:last-child
+                    link-button(120,40,#fff,16,2,#0ABBB9,#0A9290)
+
+

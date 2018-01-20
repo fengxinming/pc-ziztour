@@ -1,0 +1,80 @@
+// 重置样式
+@require './reset'
+
+// @font-face
+//   font-family ziztour
+//   font-style Regular
+//   // src url('/fonts/PingFang-Regular.ttf') format('truetype'),
+//   //   url('/fonts/PingFang-Regular.eot') format('embedded-opentype'),
+//   //   url('/fonts/PingFang-Regular.woff') format('truetype');
+//   src url('/fonts/PingFang-Regular.woff') format('truetype'),
+//       url('/fonts/PingFang-Regular.ttf') format('truetype');
+
+html, body
+  line-height 1.5
+  font-size $fontSize
+  min-width $pageWidth
+*, html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td
+  font-family $fontFamily
+
+a
+  text-decoration none
+  color #333
+  outline 0 none
+  text-decoration none
+
+.clearfix
+  clearfix()
+
+.visible
+  visibility visible
+
+.invisible
+  visibility hidden
+
+.hidden
+  display none!important
+  visibility hidden
+
+.ellipsis
+  overflow ellipsis
+.global-center
+  width $pageWidth
+  margin 0 auto
+line-1px(COLOR=rgba(#000,.6),WIDTH= 66px)
+  height 2px
+  width WIDTH
+  background-color COLOR
+
+.line-1px
+  line-1px()
+
+link-button(w,h,col,size=16,radius=2,bgc=false,hoveBgc=false)
+  w = unit(w,px)
+  h = unit(h,px)
+  radius = unit(radius,px)
+  size = unit(size,px)
+  display inline-block
+  border-radius radius
+  text-align center
+  width w
+  height h
+  line-height h
+  font-size: size;
+  if bgc
+    color col
+    background-color bgc
+    if hoveBgc
+      &:hover
+        background-color: hoveBgc
+  else
+    color rgba(col,.7)
+    border: 1px solid @color;
+    &:hover
+      color rgba(col,1)
+      border-color: @color !important
+.hover-scale
+  transition .5s transform
+  &:hover
+    transform scale(1.05)
+    box-shadow: 0 0 4px 4px rgba(0,0,0,0.07);

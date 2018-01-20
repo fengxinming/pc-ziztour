@@ -1,0 +1,58 @@
+extends ../partials/layout
+
+append css
+  link(rel='stylesheet', type='text/css', href=`${CONTEXT_PATH}/css/tech-travel/project-cases.css?v=${VERSION}`)
+
+block header
+  +nav({ active: 2,logo:"tech-travel" })
+
+block content
+  .content
+    .banner
+      .banner-wrapper
+        .banner-content
+          h1 全域旅游综合运营管理平台
+          p 
+            | 上饶市旅游资源丰富，拥有312个旅游品牌，全国地级市排名第一。
+            br/
+            | 上饶地处“三区”交汇处 ,交通网络便捷发达。旅游集团资产近百亿元，旅游星级饭店54家，旅行社149家。
+            br/
+            | 2017年，蜘蛛旅游与上饶市政府在智慧旅游发展理念上达成共识。 结合上饶“十三五”规划旅游发展目标和
+            br/
+            | 实地调研数据， 蜘蛛旅游为上饶市政府设计开发全域旅游综合运营管理平台架构。
+          .icon-wrapper
+            .icon-01 旅游分销平台
+            .icon-02 电商分销平台
+            .icon-03 公共服务平台
+        img.macbook(src=`${CDN_PATH}/images/tech-travel/macbook.png`, width=756, height=390, alt=TITLE)
+    .main
+      .part-01
+        .headline
+          h2 设计理念
+          p 以云平台为土壤，以智慧服务为养分，滋润培养上饶旅游市场各行业
+      .part-02
+        .headline
+          h2 项目解决方案
+          p 统营统销，线上线下一体化
+      .part-03  
+        .headline
+          h2 项目参与方
+          p 政企合作&nbsp;&nbsp;&nbsp;第三方支持
+        ul.list
+          li
+            label 需求方
+            em 上饶市政府
+          li
+            label 策划执行方
+            em 蜘蛛旅游
+            span 产品、技术、运营团队、运维团队、终端服务团队
+          li
+            label 运营电商平台使用方
+            em 上饶市
+            span 景区、酒店、餐饮、购物商超、分销商等
+          li
+            label 分销平台使用方
+            em OTA、传统旅行社、电商平台、公司企业等
+          li.last
+            label 第三方服务支持
+            em 腾讯

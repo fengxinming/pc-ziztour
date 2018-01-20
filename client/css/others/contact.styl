@@ -1,0 +1,65 @@
+// 全局样式
+@require "./partials/layout"
+
+.substance
+  height 801px
+  .part-01
+    padding 60px 50px 50px 50px
+    width 800px - 100
+    margin 0 auto
+    border-bottom 1px solid #D8D8D8;
+    .item
+      box-shadow: 0 0 6px 0 rgba(0,0,0,0.07)
+      width 260px
+      padding-top 103px
+      height 280px - @padding-top
+      margin 0 auto
+      text-align center
+      background-repeat no-repeat
+      &.icon-01
+        background-image inline-url('/images/others/contact/customer-service.svg')
+        background-position center 34px
+      &.icon-02
+        background-image inline-url('/images/others/contact/email.svg')
+        background-position center 38px
+      h2
+        font-size: 20px
+        color: #000000
+        height 28px
+        line-height @height
+      .p-01
+        margin 0 auto
+        width 136px
+        height 22px
+        line-height @height
+        font-size: 16px
+        color: #787878
+        padding 8px 0 15px 0
+        opacity 0.5
+        border-bottom 1px solid #ABABAB
+      .p-02
+        height 30px
+        line-height @height
+        opacity: 0.7
+        font-size: 14px
+        color: #000000
+        margin-top 5px
+  .part-02
+    padding 42px 0 0 190px
+    .qr-code
+      text-align center
+      & > img
+        border 0
+        outline none
+      p
+        font-size 12px
+        color #333333
+        height @font-size
+    ul
+      padding 5px 0 0 70px
+      li
+        height 30px
+        line-height @height
+        font-size: 14px
+        color: #787878  
+

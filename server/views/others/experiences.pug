@@ -1,0 +1,25 @@
+extends ./index
+
+block css
+  link(rel='stylesheet', type='text/css', href=`${CONTEXT_PATH}/css/others/experiences.css?v=${VERSION}`)
+
+block otherNav
+  +otherNav(1)
+
+block substance
+  h1 发展历程
+  .underline
+  .wrapper
+    ul.past-2014
+      li 14.08  公司成立
+      li 14.10  酒店直销平台上线
+    ul.past-2015
+      li 15.07  获得联想君联资本A轮融资
+      li 15.12  酒店直销月交易额过5000万
+    ul.past-2016
+      li 16.05  获得韩国养老基金LB领投、君联资本跟投B轮融资
+      li 16.05  酒店直销月交易额过2亿
+      li 16.10  蜘蛛差旅平台上线
+    ul.past-2017
+      li 17.08  蜘蛛差旅签约百家上市公司上千家企业客户
+      li 17.09  参与上饶旅游云建设

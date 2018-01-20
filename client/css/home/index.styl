@@ -1,0 +1,428 @@
+
+// 全局样式
+@require "../partials/global"
+
+// 布局样式
+@require "../partials/layout"
+
+#app
+    .banner-wrap
+        position relative
+        width 100%
+        text-align center
+        .banner-img
+            width 100%
+            min-height 600px
+            background inline-url("/images/home/banner-s.jpg") no-repeat
+            background-size 100% 100%
+            &>img
+                width 100%
+        .title-img
+            position absolute
+            width 100%
+            margin 0 auto
+            top 25%
+            &>img
+                width 560px
+        .link-nav
+            position absolute
+            width 100%
+            top 60%
+            .link-button:first-child
+                link-button(136,42,#000,18,100,#fff,#E8E8E8)
+                margin-right 64px
+            .link-button:last-child
+                link-button(136,42,#fff,18,100,#0ABBB9,#0A9290)
+
+        .referral-wrap
+            position absolute
+            width 1200px
+            margin-left -600px
+            left 50%
+            bottom 5%
+            .referral
+                display inline-block
+                width 25%
+                &>img
+                    vertical-align top
+                    width 50px
+                    height 50px
+                    margin-right 6px
+                .msg
+                    display inline-block
+                    text-align left
+                    &>h4
+                        font-size 16px
+                        color rgba(255,255,255,.8)
+                        line-height 22px
+                    &>p
+                        font-size 14px
+                        color rgba(255,255,255,.7)
+                        line-height 20px
+    .content-wrap
+        width 100%
+        margin 0 auto
+        .float-right
+            position relative
+            z-index 2
+            float right
+            margin-top 5px
+        .product-title
+            &>img
+                width 234px
+                margin-bottom 25px
+            .line-1px
+                width 79px
+        .resource-wrap
+            width 100%
+            background-color: #fff
+            .resource-content
+                width $pageWidth
+                padding 136px 0 58px 0
+                &>img
+                    width 658px
+                    margin-bottom 58px
+                .resource-list
+                    width 100%
+                    height 256px
+                    &:first-of-type
+                        li.resource-details:nth-of-type(odd)
+                            background-color: #F8F8F8
+                    &:last-of-type
+                        li.resource-details:nth-of-type(even)
+                            background-color: #F8F8F8
+                    .resource-details
+                        position relative
+                        display inline-block
+                        width 25%
+                        height 100%
+                        text-align center
+                        background-color: #FDFDFD
+                        transition .5s transform
+                        &:hover
+                            transform scale(1.03)
+                            z-index 2
+                            box-shadow 2px 2px 2px 0 rgba(0, 0, 0, 0.15)
+                        .link-area
+                            display inline-block
+                            width 100%
+                            height 100%
+                        .resource-count
+                            margin-top 67px
+                            font-size: 42px;
+                            color: #0ABBB9;
+                            line-height 59px
+
+                        .resource-icon
+                            width 50px
+                            height 50px
+                        .resource-type
+                            font-size: 18px;
+                            color: #333333;
+                            line-height 25px
+
+
+        .product-service
+            width 100%
+            background-color: #fafafa
+            .product-content
+                padding 103px 0 140px
+
+                .button
+                    display inline-block
+                    width 140px
+                    height 46px
+                    font-size 16px
+                    line-height 46px
+                    border-radius: 2px;
+                    text-align center
+                .green-border
+                    color #0ABBB9
+                    border: 1px solid #0ABBB9;
+                    margin-right 23px
+                .white-color
+                    background: #0ABBB9;
+                    color #fff
+                h2
+                    opacity: 0.8;
+                    font-size: 26px;
+                    color: #0ABBB9;
+                    line-height 37px
+                    margin-top 55px
+                h5
+                    opacity: 0.6;
+                    font-size: 16px;
+                    color: #787878;
+                    margin-bottom 55px
+                .travel-wrap
+                    width 100%
+                    .float-right
+                        .link-button:first-child
+                            link-button(140,46,#0ABBB9,16)
+                            margin-right 23px
+                        .link-button:last-child
+                            link-button(140,46,#fff,16,2,#0ABBB9,#0A9290)
+                    .travel-company
+                        width 100%
+                        height 460px
+                        font-size 0
+                        .company-item
+                            position relative
+                            width 25%
+                            height 100%
+                            display inline-block
+                            overflow hidden
+                            &:nth-of-type(1)
+                                background url($CDN_PATH + '/images/home/company(1).png') 100% 100% no-repeat
+                            &:nth-of-type(2)
+                                background url($CDN_PATH + '/images/home/company(2).png') 100% 100% no-repeat
+                            &:nth-of-type(3)
+                                background url($CDN_PATH + '/images/home/company(3).png') 100% 100% no-repeat
+                            &:nth-of-type(4)
+                                background url($CDN_PATH + '/images/home/company(4).png') 100% 100% no-repeat
+                            &:hover
+                                .company-details
+                                    background rgba(#0ABBB9,.8) inline-url("/images/home/mark.svg") no-repeat
+                                    //background rgba(#0ABBB9,.8) inline-url("/images/home/mark.png") no-repeat
+                                    background-size 30px 30px
+                                    background-position center 182px
+                                    transform translateY(-65%)
+                            .company-details
+                                position absolute
+                                width 100%
+                                height 100%
+                                top 65%
+                                transition .5s transform
+                                text-align center
+                                box-sizing border-box
+                                padding 48px 18px 0 30px
+                                .company-icon
+                                    width 50px
+                                    height 50px
+                                .company-title
+                                    margin 20px 0
+                                    font-size: 16px;
+                                    color: #FFFFFF;
+                                    line-height 22px
+                                &>.line-1px
+                                    background-color: rgba(#fff,.6)
+                                    margin 0 auto 67px
+                                &>h6
+                                    font-size: 24px;
+                                    color: #FFFFFF;
+                                    line-height 33px
+                                .company-text
+                                    text-align left
+                                    font-size: 14px;
+                                    color: rgba(#FFFFFF,.8)
+                                    line-height 20px
+                                    margin 10px 0 15px
+
+                .parade-wrap
+                    width 100%
+                    .link-button
+                        link-button(140,46,#0ABBB9,16)
+                    .parade-list
+                        width 100%
+                        .parade-details
+                            background-color: #fff
+                            display inline-block
+                            width 361px
+                            height 480px
+                            text-align center
+                            box-shadow: 0 0 2px 2px rgba(0,0,0,0.07);
+                            transition .3s transform
+                            &:hover
+                                transform scale(1.05)
+                                box-shadow: 0 0 4px 4px rgba(0,0,0,0.07);
+                                .line-1px
+                                    width 211px !important
+                            &:nth-of-type(2)
+                                margin 0 56px
+                            .parade-title-img
+                                width 329px
+                                height 128px
+                                margin 14px auto 33px auto
+                                &>img
+                                    width 100%
+                                    height 100%
+                            .parade-guide
+                                padding 0 41px
+                                &>h3
+                                    font-size: 18px;
+                                    font-weight bold
+                                    color: #000000;
+                                    line-height 25px
+                                    margin-bottom 5px
+                                &>h4
+                                    font-size: 16px;
+                                    color: #333333;
+                                    line-height 22px
+                                    margin-bottom 15px
+                                .line-1px
+                                    background-color #0ABBB9
+                                    margin 0 auto
+                                    transition .5s width
+                                .parade-text
+                                    font-size: 14px;
+                                    color: #787878
+                                    line-height: 24px;
+                                    margin 22px 0 55px
+                                    text-align left
+                                .link-button
+                                    link-button(110,36,#fff,16,2,#0ABBB9,#0A9290)
+
+
+
+
+
+
+        .about-wrap
+            width 100%
+            position relative
+            .banner-img
+                width 100%
+                img
+                    width 100%
+
+            .about-content
+                position absolute
+                width $pageWidth
+                height 100%
+                top 0
+                left 50%
+                margin-left -600px
+                .product-title
+                    padding-top 66px
+                    &>img
+                        width 214px
+                    .line-1px
+                        background-color: rgba(#fff,.5)
+                .about-list
+                    width 100%
+                    font-size 0
+                    text-align center
+                    margin 5% 0 7%
+                    color: #FFFFFF;
+                    .about-details
+                        display inline-block
+                        width 25%
+                        &>img
+                            width 70px
+                            height 70px
+                            margin-bottom 17px
+                        &>h5
+                            opacity: 0.9;
+                            font-size: 24px;
+                            line-height 33pe
+                            margin-bottom 7px
+                        &>h6
+                            opacity: 0.6;
+                            font-size: 16px;
+                            line-height 22px
+                .link-button
+                    link-button(150,48,#FFFFFF,16)
+        .partner-wrap
+            width 100%
+            padding 95px 0
+            background-color: #fff
+            .partner-content
+                .partner-list
+                    width 100%
+                    height 617px
+                    text-align center
+                    margin-top 52px
+                    overflow hidden
+                    background url($CDN_PATH + "/images/home/partner-bg.png") 100% 100% no-repeat
+                    .partner-details
+                        float left
+                        width 25%
+                        height 100%
+                        transition: background .5s
+                        &:nth-of-type(odd)
+                            background-color: #F9F9F9
+                        &:nth-of-type(even)
+                            background-color: #FDFDFD
+                        &:hover
+                            background none
+                            &>h5
+                                color: #0ABBB9;
+                            .line-1px
+                                transform scaleX(1.5)
+                            &>ul>li
+                                color: #fff;
+                        &>h4
+                            font-size: 36px;
+                            color: #0ABBB9;
+                            line-height 50px
+                            margin 32px 0 17px
+                        &>h5
+                            font-size: 16px;
+                            color: #787878;
+                            line-height 22px
+                            font-weight 600
+                        .line-1px
+                            margin 11px auto 34px
+                            height 1px
+                            background-color: #0ABBB9
+                            transform scaleX(0)
+                            transition .5s transform
+                        &>ul>li
+                            font-size: 13px;
+                            color: #999999;
+                            line-height: 30px;
+
+
+
+
+
+        .business-wrap
+            width 100%
+            padding 33px 0 87px
+            background: #FAFAFA;
+            .business-content
+                .product-title
+                    &>img
+                        width 336px
+                .business-list
+                    margin-top 56px
+                    text-align center
+                    width 100%
+                    height 280px
+                    .business-details
+                        background-color: #fff
+                        display inline-block
+                        text-align left
+                        width 360px
+                        height 100%
+                        box-sizing border-box
+                        padding 47px 0 0 28px
+                        box-shadow: 0 0 6px 2px rgba(0,0,0,0.07);
+                        &>h3
+                            font-size: 22px;
+                            color: #000000;
+                            line-height 30px
+                            margin-bottom 5px
+                        &>h4
+                            font-size: 16px;
+                            color: #787878;
+                            line-height 22px
+                        .relation
+                            font-size: 14px;
+                            color: #999999;
+                            line-height: 32px;
+                        .line-1px
+                            margin 16px 0
+                            height 1px
+                    .consociation
+                        display inline-block
+                        width 223px
+                        height 100%
+                        background inline-url("/images/home/consociation.svg") no-repeat
+                        //background: inline-url("/images/home/consociation.png") no-repeat
+                        background-size 115px 102px
+                        background-position 50% 50%
+                        vertical-align top
+
+
+

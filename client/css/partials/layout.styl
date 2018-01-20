@@ -1,0 +1,196 @@
+.header
+  position absolute
+  top 0
+  left 0
+  z-index 1000
+  background rgba(#000, 0.2 )
+  width 100%
+  height 70px
+  line-height @height
+  border-bottom 1px solid rgba(#fff, 0.2)
+
+  .header-wrapper
+    margin 0 auto
+    width $pageWidth
+    height 100%
+
+    & > .logo
+      float left
+      margin 0 0 0 16px
+      &, & > img
+        border 0 none
+        outline none
+      & > img
+        vertical-align middle
+        width 150px
+        height 35px
+
+    & > .navigation
+      float right
+      margin-right 64px
+      &:hover .active a
+        color rgba(255,255,255,.48)
+      li
+        float left
+        padding 0 8px
+        font-size: 14px
+        text-align center
+        & > a
+          display: block
+          width 56px
+          border 0 none
+          outline none
+          color rgba(255,255,255,.48)
+          padding 0 20px
+        &:hover>a
+          color #fff !important
+      .active
+        position relative
+        & > a
+          color #fff
+        .nav-line
+          position absolute
+          top 69px
+          left 50%
+          transition .5s transform
+          width 56px
+          margin-left -28px
+          height 2px
+          background-color: #fff
+
+
+    & > .contact
+      position relative
+      float right
+      font-size 16px
+      color #fff
+      margin-right 84px
+      & > span
+        line-height 20px
+      .phone
+        width 15px
+        margin-right 6px
+        vertical-align middle
+        background inline-url('/images/partials/phone.svg') no-repeat left top
+        display inline-block
+      .wechat
+        margin-left 17px
+        width 21px
+        cursor pointer
+        vertical-align middle
+        background inline-url('/images/partials/wechat.svg') no-repeat left top
+        display inline-block
+        &:hover
+          &+.qr-code
+            display block
+      .qr-code
+        position absolute
+        display none
+        width 166px
+        height 173px
+        background inline-url("/images/partials/qr-code.png") no-repeat left top
+        z-index 2
+        right -70px
+        top 65px
+
+.sides-nav
+  display none
+  z-index 99
+  width: 50px
+  position: fixed
+  right: 2%
+  top: 60%
+  li
+    width: 100%
+    height: 50px
+    margin-bottom: 2px
+    position: relative
+    cursor: pointer
+    background inline-url("/images/partials/saide-nav.svg") no-repeat 100% 100%
+    &:hover
+      background #fff inline-url("/images/partials/saide-nav-hover.svg") no-repeat 100% 100%
+      &>.out-b
+        display: block
+    &.server
+      background-position-y 0
+      .phone
+        .g
+          font-size: 16px
+          margin 24px 0 11px
+        .gre
+          font-size: 18px
+          color #2AB0A6
+          margin-bottom 28px
+    &.wx
+      background-position-y -50px
+      .wx-code
+        .qr-code
+          margin 10px auto 0
+          width: 133px
+          height: 133px
+          background inline-url('/images/partials/qr_code.png') no-repeat center center
+          background-size: 110% 110%
+        .text
+          font-size 12px
+          margin-bottom 10px
+    &.top
+      height 40px
+      background-position-y -100px
+      a
+        display: block
+        width: 100%
+        height: 50px
+
+
+    .out-b
+      position: absolute
+      z-index 100
+      text-align center
+      width 170px
+      color: #969696;
+      background: #fff
+      border 1px solid #e1e1e1
+      top: 0
+      left: -180px
+      display: none
+      &:after
+        display: block
+        content: ' '
+        width: 6px
+        height: 16px
+        position: absolute
+        top: 10px
+        right: -6px
+        background inline-url('/images/partials/right-arrow.svg') no-repeat
+
+
+
+.footer
+  width 100%
+  height 50px
+  padding 30px 0 20px 0
+  background: #E8EBF1
+  text-align center
+  .link-nav
+    text-align center
+    li
+      display inline-block
+      padding 0 30px
+      height 20px
+      line-height @height
+      text-align center
+      &:hover > a
+        color #0abbb9
+      & > a
+        font-size 14px
+        outline none
+        color: #999999
+
+  .copyright
+    margin 13px auto 0 auto
+    font-size: 12px;
+    color: #ADADAD;
+    height 17px
+    line-height @height
+
+

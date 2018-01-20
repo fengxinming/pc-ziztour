@@ -1,0 +1,56 @@
+
+// 全局样式
+@require "./partials/layout"
+
+.substance
+  h2, p
+    margin-bottom 20px
+  h2
+    height 18px
+    line-height @height
+    font-size: 18px
+    color: #0ABBB9
+  p
+    line-height 30px
+    font-size: 14px;
+    color: #787878;
+
+    &.w535
+      width 535px
+
+    em
+      color: #0ABBB9
+
+  .img01
+    width 380px
+    height 230px
+    float right
+
+  .wrapper
+    padding 50px 30px 0 30px
+
+  .categories
+    padding 30px 6px 200px 6px
+    .item
+      text-align center
+      padding 0 30px
+      margin 0 auto
+      width 220px
+      padding-top 144px
+      height 400px - @padding-top
+      box-shadow: 0 0 3px 0 #87E5E4
+      background-repeat no-repeat
+      &.icon-01
+        background-image inline-url('/images/others/introduction/icon-01.svg')
+        background-position center 55px
+      &.icon-02
+        background-image inline-url('/images/others/introduction/icon-02.svg')
+        background-position center 43px
+      &.icon-03
+        background-image inline-url('/images/others/introduction/icon-03.svg')
+        background-position center 53px
+      & > h2
+        margin-bottom 24px
+      & > p
+        width 100%
+        text-align left  

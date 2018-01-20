@@ -1,0 +1,396 @@
+// 全局样式
+@require "../partials/global"
+
+// 布局样式
+@require "../partials/layout"
+
+#app
+    .banner-wrap
+        position relative
+        width 100%
+        margin-bottom -5px
+        text-align center
+        .banner-img
+            width 100%
+            min-height 600px
+            background inline-url("/images/travel/banner-s.jpg") no-repeat
+            background-size 100% 100%
+            &>img
+                width 100%
+        .title-img
+            position absolute
+            width 100%
+            margin 0 auto
+            top 20%
+            &>img
+                width 40%
+        .link-area
+            position absolute
+            width 100%
+            bottom  35%
+            .link-button
+                link-button(240,48,#fff,20)
+                border-width 2px
+
+        .referral-wrap
+            position absolute
+            width 1200px
+            margin-left -600px
+            left 50%
+            bottom 5%
+            .referral
+                display inline-block
+                width 25%
+                padding-top 10px
+                &:hover>.referral-content
+                    & >.referral-icon
+                        opacity 0
+                    & >.referral-msg
+                        opacity 1
+                .referral-content
+                    position relative
+                    margin-bottom 15px
+                    .referral-icon
+                        opacity 1
+                        width 50px
+                        height 50px
+                        transition .5s opacity
+                    .referral-msg
+                        position absolute
+                        width 100%
+                        height 50px
+                        top 0
+                        left 0
+                        transition .8s opacity
+                        opacity 0
+                        .preferral-text
+                            margin 0 auto
+                            font-size: 14px;
+                            color: #FFFFFF;
+                            line-height: 20px;
+                            margin-bottom 10px
+                        .line
+                            width 100%
+                            height 6px
+                            background inline-url("/images/travel/line.svg") 157px 6px no-repeat
+                            background-position center center
+                &>h4
+                    font-size: 20px;
+                    color: #FFFFFF;
+                    line-height: 24px;
+
+    .content-wrap
+        width 100%
+        .core-function-wrap
+            width 100%
+            background url($CDN_PATH + "/images/travel/bg2.png") no-repeat
+            background-size 100% 100%
+            .core-function
+                padding 100px 0
+                .title-img
+                    text-align center
+                    margin-bottom 50px
+                    &>img
+                        width 390px
+                        height 94px
+                .travel-list
+                    width 100%
+                    .travel-details
+                        overflow hidden
+                        vertical-align top
+                        display inline-block
+                        width 260px
+                        height 360px
+                        text-align center
+                        position relative
+                        background-position 0 0
+                        box-shadow: 0 0 2px 1px rgba(0,0,0,0.2);
+                        &:not(:nth-of-type(4n))
+                            margin-right 53px
+                            margin-bottom 55px
+                        &:not(:nth-of-type(8)):hover>.details-content
+                            transform translateY(-180px)
+                        &:nth-of-type(1)
+                            background url($CDN_PATH + "/images/travel/travel-details1.png") no-repeat
+                        &:nth-of-type(2)
+                            background url($CDN_PATH + "/images/travel/travel-details2.png") no-repeat
+                        &:nth-of-type(3)
+                            background url($CDN_PATH + "/images/travel/travel-details3.png") no-repeat
+                        &:nth-of-type(4)
+                            background url($CDN_PATH + "/images/travel/travel-details4.png") no-repeat
+                        &:nth-of-type(5)
+                            background url($CDN_PATH + "/images/travel/travel-details5.png") no-repeat
+                        &:nth-of-type(6)
+                            background url($CDN_PATH + "/images/travel/travel-details6.png") no-repeat
+                        &:nth-of-type(7)
+                            background url($CDN_PATH + "/images/travel/travel-details7.png") no-repeat
+                        &:nth-of-type(8)
+                            background url($CDN_PATH + "/images/travel/travel-details8.png") no-repeat
+                        &>h2
+                            letter-spacing 1px
+                            margin 26px auto 0
+                            font-size: 19px;
+                            color: #FFFFFF;
+                        .details-content
+                            position absolute
+                            transition .5s transform
+                            top 260px
+                            left 0
+                            width 100%
+                            height 280px
+                            color: #2B486F;
+                            background-color: #fff
+                            &>h3
+                                margin 20px auto 10px
+                                font-size: 20px;
+                                line-height: 20px;
+                            &>h4
+                                font-size: 14px;
+                                line-height: 20px;
+                            .details-list
+                                font-size: 12px;
+                                color: #2B486F;
+                                line-height: 18px;
+                                text-align left
+                                list-style disc
+                                margin 32px 20px 0 30px
+                        &.details-last
+                            &>h2
+                                font-size: 36px;
+                                color: #FFFFFF;
+                                margin 29px 53px 0
+                            &>.details-content
+                                position static
+                                background none
+                                &>.details-list
+                                    color #fff !important
+                                &>.button-link
+                                    link-button(110,37,#fff)
+                                    margin-top 30px
+        .member-equity-wrap
+            width 100%
+            background url($CDN_PATH + "/images/travel/bg3.png") no-repeat
+            background-size 100% 100%
+            .member-equity
+                padding 100px 0
+                .title-img
+                    text-align center
+                    &>img
+                        width 182px
+                        height 82px
+                .member-list
+                    width 100%
+                    margin-top 55px
+                    .member-details
+                        position relative
+                        z-index 2
+                        display inline-block
+                        width 320px
+                        background: #FFFFFF;
+                        box-shadow: 0 0 10px 0 rgba(173,180,184,0.50);
+                        border-radius: 5px;
+                        .member-img>img
+                            width 100%
+                        &:not(:nth-of-type(2))
+                            vertical-align bottom
+                        &:nth-of-type(2)
+                            vertical-align bottom
+                            margin 0 120px
+                        &:after
+                            position absolute
+                            bottom -20px
+                            left -61px
+                            content ""
+                            width 443px
+                            height 29px
+                            background inline-url("/images/travel/shaw.png") no-repeat
+                            background-size 100% 100%
+                        .details-content
+                            width 320px
+                            height 390px
+                            .details-list
+                                margin 20px 12px 0 30px
+                                list-style disc
+                                font-size: 12px;
+                                color: #787878;
+                                line-height: 24px;
+                            .details-bottom
+                                position absolute
+                                width 100%
+                                bottom 45px
+                                text-align center
+                                color: #2B486F;
+                                &>h2
+                                    font-size: 24px;
+                                    line-height: 24px;
+                                &>h3
+                                    font-size: 14px;
+                                    color: #2B486F;
+                                    line-height: 24px;
+                                    margin 10px 0 21px
+                                .link-button
+                                    link-button(150,37,#2B486F)
+
+
+        .member-weal-wrap
+            width 100%
+            background url($CDN_PATH + "/images/travel/bg4.png") no-repeat
+            background-size 100% 100%
+            .member-weal
+                padding 100px 0
+                .title-img
+                    text-align center
+                    &>img
+                        width 347px
+                        height 87px
+                .weal-list
+                    width 100%
+                    margin-top 55px
+                    text-align center
+                    .weal-details
+                        display inline-block
+                        background-color: #fff
+                        width 220px
+                        height 240px
+                        &:not(:last-of-type)
+                            margin-right 25px
+                        &:hover
+                            .details-content>.details-mask
+                                opacity 1
+                        .details-content
+                            position relative
+                            margin 3px 3px 12px
+                            &>img
+                                width 100%
+                            .details-mask
+                                position absolute
+                                width 100%
+                                height 98%
+                                top 0
+                                left 0
+                                background-color: rgba(#000,.3)
+                                color: #FFFFFF;
+                                opacity 0
+                                transition .5s opacity
+                                &>h5
+                                    margin 37px 0 28px
+                                    font-size: 16px;
+                                &>p
+                                    font-size: 16px;
+                                    line-height 22px
+
+                        &>h3
+                            font-size: 20px;
+                            color: #2B486F;
+                            line-height: 24px;
+        .serve-case-wrap
+            width 100%
+            background url($CDN_PATH + "/images/travel/bg2.png") no-repeat
+            background-size 100% 100%
+            .serve-case
+                padding 96px 0
+                .title-img
+                    text-align center
+                    &>img
+                        width 333px
+                        height 89px
+                .case-list
+                    width 100%
+                    text-align center
+                    .weal-details
+                        position relative
+                        display inline-block
+                        width 340px
+                        box-shadow: 0 0 8px 3px rgba(190,197,203,0.50);
+                        &:nth-of-type(2)
+                            margin 55px 90px 0
+                        p
+                            text-align left
+                            font-size: 14px;
+                            line-height: 24px;
+                        .use-before
+                            background #fff inline-url("/images/travel/before.png") no-repeat
+                            background-position center 118px
+                            background-size 145px 83px
+                            padding 10px 30px 0
+                            height 385px
+                            box-sizing border-box
+                            .weal-site
+                               text-align right
+                               &>span
+                                    position relative
+                                    left 20px
+                                    font-size: 18px;
+                                    color: #A0A0A0;
+                                    line-height: 18px;
+                                    &::before
+                                        content "`"
+                                        display inline-block
+                                        width 12px
+                                        height 100%
+                                        margin-right 3px
+                                        background inline-url("/images/travel/landmark.png") no-repeat
+                                        background-size 100% 100%
+                            &>h3
+                                margin 15px 0 173px
+                                font-size: 30px;
+                                color: #2B486F;
+                                line-height: 30px;
+                            &>p
+                                color: #787878;
+                        .use-after
+                            box-sizing border-box
+                            height 385px
+                            background #2B486F inline-url("/images/travel/after.png") no-repeat
+                            background-position center 45px
+                            background-size 130px 83px
+                            padding 173px 30px 0
+                            &>h2
+                                font-size: 24px;
+                                color: #FFFFFF;
+                                line-height 33px
+                                margin-bottom 15px
+                            &> p
+                                color rgba(#fff,.9)
+
+
+
+        .more-gift-wrap
+            width 100%
+            background #fff
+            .more-gift
+                padding 100px 0
+                .title-img
+                    text-align center
+                    &>img
+                        width 290px
+                        height 89px
+
+                .gift-list
+                    width 100%
+                    text-align center
+                    .gift-details
+                        display inline-block
+                        width 340px
+                        height 400px
+                        background: #FFFFFF;
+                        box-shadow: 0 0 4px 2px rgba(189,195,198,0.50);
+                        &:nth-of-type(2)
+                            margin 55px 90px 0
+                        &>h3
+                            font-size: 24px;
+                            color: #424D64;
+                            line-height 33px
+                            margin 34px 0 43px
+                        &>img
+                            width 80px
+                            height 80px
+                        &>p
+                            font-size: 16px;
+                            color: #787878;
+                            line-height: 24px;
+                            margin 35px 0 20px
+                        .link-button
+                            link-button(200,45,#2B486F,16,61,#fff,#F2F7FE)
+                            border 1px solid #2B486F
+

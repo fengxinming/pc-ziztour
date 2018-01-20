@@ -1,0 +1,131 @@
+// 全局样式
+@require "./partials/layout"
+
+.substance
+  .wrapper
+    padding 20px 30px 170px 30px
+
+    .part-01
+      height 300px
+      box-shadow: 0 0 6px 0 rgba(0,0,0,0.07)
+      img
+        margin 19px 0 0 51px
+      .intro
+        margin-left 72px
+        padding-top 79px
+        h1
+          font-size: 48px;
+          color: #0ABBB9;  
+          height @font-size
+          line-height @height
+          margin 0
+        p
+          margin-top 20px
+          opacity: 0.78
+          font-size: 16px
+          color: #787878
+          line-height: 30px
+    
+    .part-02
+      margin-top 40px
+      border-top 1px solid #D8D8D8
+      .tab-header
+        height 80px
+        line-height @height
+        margin-left -20px
+        overflow hidden
+        & > a
+          background: #FFFFFF
+          border: 1px solid #D8D8D8
+          font-size: 14px
+          color: #787878
+          width 80px
+          height 30px
+          line-height @height
+          text-align center
+          display inline-block
+          margin-left 20px
+          &.active
+            background: #0ABBB9
+            border-color @background
+            color #fff
+
+      .recruitment-info
+        margin-bottom 20px
+        border 1px solid #D8D8D8
+        padding 22px 30px 45px 30px
+        font-size 14px
+        .headline
+          font-size: 20px
+          color: #333333
+          height 48px
+          line-height @height
+          border-bottom 1px solid #D8D8D8
+          .release-time
+            font-size: 14px
+            color: #787878
+            text-align right
+        .profile
+          line-height 26px
+          padding: 15px 0 10px 0
+        .requirement
+          line-height 26px
+          color: #787878
+          dt
+            font-size: 16px
+            color: #333333
+            height 22px
+            line-height @height
+            padding 15px 0
+
+      .paging-bar
+        padding 10px 0 0 0
+        height 30px
+        line-height @height
+        text-align right
+
+        input[type="button"]
+          border 0 none
+          outline none
+
+        .paging-info
+          font-size: 14px
+          color: #5D5D5D
+          letter-spacing: 0.18px
+
+        .paging-button
+          height 100%
+          width 22px
+          padding 0
+          background #fff
+          letter-spacing: 0.18px
+          font-size 14px
+          &.active
+            background: #0ABBB9
+            border-radius: 2px
+            color #fff
+
+        .text-field
+          vertical-align top
+          background: #FFFFFF
+          border: 1px solid #D0D0D0
+          border-radius: 2px
+          font-size 16px
+          height @font-size
+          line-height @height
+          padding 6px 0
+          text-align center
+          width 60px
+
+        .jump
+          vertical-align top
+          background #fff
+          border: 1px solid #D0D0D0 !important
+          border-radius: 2px
+          font-size: 14px
+          color: #5D5D5D
+          letter-spacing: 0.18px
+          padding 0
+          width 57px
+          height 100%
+          margin-left 10px

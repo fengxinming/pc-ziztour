@@ -1,0 +1,62 @@
+extends ../partials/layout
+
+append css
+  link(rel='stylesheet', type='text/css', href=`${CONTEXT_PATH}/css/tech-travel/index.css?v=${VERSION}`)
+
+
+block header
+  +nav({ active: 2 ,logo:"tech-travel"})
+
+
+block content
+  #app
+    .banner-wrap
+      .banner-img
+        img(src=CDN_PATH + "/images/tech-travel/banner.jpg")
+      .title-img
+        img(src=CDN_PATH + "/images/tech-travel/title.png")
+      .link-nav
+        a.link-button(href="/tech-travel/project-cases.html") 项目案例
+        a.link-button(href="/tech-travel/services.html") 产品服务
+    .content-wrap
+      .commerce-terrace-wrap
+        .commerce-terrace.global-center
+          .title-img
+            img(src=CDN_PATH + "/images/tech-travel/text1.svg",alt=TITLE)
+          ul.referral-list
+            each item, index in referrals
+              li.referral-details
+                .details-content
+                  .icon-img
+                    img(src=CDN_PATH + "/images/home/company-"+ (index+1) +".svg",alt=TITLE)
+                  .details-title
+                    h2= item.title
+                    h5= item.guide
+                  p.details-msg!= item.msg
+          .link-nav
+            a.link-button(href="/tech-travel/services.html") 产品服务
+      .trade-guide-wrap
+        .trade-guide.global-center
+          .title-img
+            img(src=CDN_PATH + "/images/tech-travel/text2.svg",alt=TITLE)
+          ul.guide-list
+            each item, index in guides
+              li.guide-details
+                .guide-img
+                  img(src=CDN_PATH + "/images/tech-travel/trade-"+ (index+1) +".png")
+                .details-content
+                  h2= item.title
+                  h5= item.guide
+                  p!= item.msg
+          .link-guide
+            p 欢迎各大OTA ,传统旅行社和公司企业免费申请体验。
+            a.link-button(href="/tech-travel/services/distribution.html") 产品服务
+      .wit-travel-wrap
+        .wit-travel.global-center
+          .title-img
+            img(src=CDN_PATH + "/images/tech-travel/text3.svg",alt=TITLE)
+          .main-img
+            img(src=CDN_PATH + "/images/tech-travel/color.png",alt=TITLE)
+          .link-nav
+            a.link-button(href="/tech-travel/services/government.html") 产品服务
+            a.link-button(href="/tech-travel/project-cases.html") 项目案例

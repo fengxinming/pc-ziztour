@@ -1,0 +1,187 @@
+
+// 全局样式
+@require "../partials/global"
+
+// 布局样式
+@require "../partials/layout"
+
+// 网格布局
+@require "../partials/cssgrids"
+
+.content
+  background #fff
+
+  .banner
+    height 407px
+    background url($CDN_PATH/images/tech-travel/services.png) no-repeat center center
+    .banner-wrapper
+      position relative
+      margin 0 auto
+      width $pageWidth
+      height 100%
+      .banner-content
+        position absolute
+        top 153px
+        left 80px
+        h1
+          margin 0
+          font-size 42px
+          color: #FFFFFF
+          line-height: 59px
+        p
+          line-height 28px
+          font-size: 20px
+          color: #FFFFFF
+          letter-spacing: 12px
+  .main
+    width $pageWidth
+    margin 0 auto
+
+    $leftWidth = 240px
+    $rightWidth = $pageWidth - 240
+    $labelWidth = 124px
+    $subCttWidth = $rightWidth - $labelWidth - 24
+
+    .hidden
+      &.restore
+        display block !important
+        visibility visible
+
+    .tab-header
+      $liWidth = 272px
+
+      text-align: center
+      padding-top 30px
+      height 193px - @padding-top
+
+      .tabs
+        display inline-block
+        li
+          width $liWidth
+          float left
+          margin: 0 50px
+          height: 80px
+          cursor pointer
+          h2, p
+            opacity: 0.3
+          &.active
+            border-bottom 3px solid #33D2D0
+            position relative
+            cursor default
+            h2, p
+              opacity: 1
+            &:after
+              content ' '
+              position: relative;
+              top 12px
+              // left 50%
+              height: 0
+              width: 0
+              font-size: 0
+              line-height: 0
+              border-color: #33D2D0 transparent transparent transparent
+              border-style: solid
+              // _border-style: solid dashed dashed dashed
+              border-width: 8px 8px 0 8px
+          
+          h2
+            font-size: 22px
+            color: #333333
+          p
+            font-size: 18px
+            color: #151515
+            line-height: 30px
+
+    .left
+      .intro
+        width $leftWidth
+        height 353px
+        background-repeat no-repeat
+        background-position center top
+        text-align center
+        &.icon-01
+          background-image url($CDN_PATH/images/tech-travel/services-intro-01.png)
+        &.icon-02
+          background-image url($CDN_PATH/images/tech-travel/services-intro-02.png)
+        &.icon-03
+          background-image url($CDN_PATH/images/tech-travel/services-intro-03.png)    
+        p
+          font-size 18px
+          color #FFFFFF
+          letter-spacing 4.2px
+          line-height 26px
+          background-repeat no-repeat
+          background-position center center
+          padding-top 104px
+          &.icon-01
+            background-image inline-url('/images/tech-travel/tb-icon-01.svg')
+          &.icon-02
+            background-image inline-url('/images/tech-travel/tb-icon-02.svg')
+          &.icon-03
+            background-image inline-url('/images/tech-travel/tb-icon-03.svg')
+        h2
+          margin-top 48px
+          font-size: 32px
+          color: #FFFFFF
+          height 45px
+          line-height @height
+
+    .right
+      width $rightWidth
+
+      .list
+        padding-bottom 150px
+        .row
+          &:last-child
+            .sub-ctt
+              border-bottom 0 none
+          label, .sub-ctt
+            padding 16px 0
+
+          label, 
+          span, 
+          em
+            font-size 16px
+            color #787878
+
+          label
+            width $labelWidth
+            text-align: right
+            padding-right 24px
+          em
+            color #333
+            font-weight 600
+            padding-right 24px
+          p
+            font-size: 14px
+            color: #333333
+            line-height: 26px
+            // margin -4px 0
+          .sub-ctt
+            border-bottom 1px solid #D8D8D8
+            // width $subCttWidth
+            width 752px
+          .items
+            dt
+              font-size: 16px
+              color: #333333
+              line-height: 27px
+              margin-bottom 11px
+              font-weight 600
+            dd
+              font-size 14px
+              color #787878
+              line-height 32px
+              position relative
+              padding-left 14px
+              &:before
+                position absolute
+                content ' '
+                width 4px
+                height @width
+                opacity: 0.8
+                background: #0ABBB9
+                border-radius 50%
+                top ((@line-height - @height) / 2)
+                left 0
+  

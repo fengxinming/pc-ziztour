@@ -1,0 +1,25 @@
+mixin nav(opts)
+  .header(class!=attributes.class || '')
+    .header-wrapper
+      a.logo(href=CONTEXT_PATH + '/')
+        img(src=CDN_PATH + '/images/'+(opts.logo ||'home') +'/logo.svg', alt=TITLE)
+      .contact
+        span.phone &nbsp;
+        span 400-0780-009
+        span.wechat &nbsp;
+        .qr-code
+      ul.navigation#main-nav
+        each item, index in NAV
+          li(class={ active: opts.active === index })
+            a(href=CONTEXT_PATH + item.path)= item.name
+            if opts.active === index
+              .nav-line
+
+
+mixin resList(list,row)
+  ul.resource-list
+    each val, index in list
+      li.resource-details
+        p.resource-count= val.count
+        img.iresource-cont(src=`${CDN_PATH}/images/home/resource-${row}-${index+1}.svg`)
+        p.resource-type= val.type

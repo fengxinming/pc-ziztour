@@ -1,0 +1,97 @@
+// 全局样式
+@require "./partials/layout"
+
+.substance
+  .part-01, .part-02
+    h2
+      font-size: 30px
+      color: #333333
+      height @font-size
+      line-height: @height
+      margin-bottom 24px
+      .small
+        font-size 20px
+    h3
+      font-size: 26px
+      color: #333333
+      height @font-size
+      line-height: @height
+    h4
+      font-size: 18px
+      color: #0ABBB9
+      height @font-size
+      line-height: @height
+      // font-weight: 600
+    p
+      font-size: 14px
+      color: #787878
+      line-height 30px
+
+  .part-01
+    padding 80px 30px 48px 30px
+    border-bottom: 1px solid #D8D8D8
+    h3
+      margin 30px 0 25px 0
+    .categories
+      padding 30px 6px 0 6px
+      margin 0 -12px
+      .item
+        text-align center
+        margin 0 auto
+        width 172px
+        padding-top 101px
+        height 300px - @padding-top
+        box-shadow: 0 0 3px 0 #87E5E4
+        background-repeat no-repeat
+        background-position center 30px
+        &.icon-01
+          background-image inline-url('/images/others/services/icon-01.svg')
+          // background-position center 30px
+        &.icon-02
+          background-image inline-url('/images/others/services/icon-02.svg')
+          // background-position center 30px
+        &.icon-03
+          background-image inline-url('/images/others/services/icon-03.svg')
+          // background-position center 34px
+        &.icon-04
+          background-image inline-url('/images/others/services/icon-04.svg')
+          // background-position center 43px
+        &.icon-05
+          background-image inline-url('/images/others/services/icon-05.svg')
+          // background-position center 43px
+        dt
+          font-size: 22px
+          color: #0ABBB9
+          margin-bottom 20px
+          // font-weight 600
+        dt, dd  
+          height 30px
+          line-height @height
+        dd
+          font-size: 16px
+          color: #787878
+          
+  .part-02
+    padding 50px 30px 115px 30px
+    h3
+      margin 30px 0
+    h4
+      margin 30px 0 10px 0
+
+  .part-bottom
+    padding-top 20px
+    text-align: right
+    .learn-more
+      border: 1px solid #0ABBB9
+      border-radius: 2px;
+      outline 0
+      font-size: 12px
+      color: #0ABBB9
+      width 100px
+      height 30px
+      line-height @height
+      display inline-block
+      text-align center
+      &:hover
+        color #01908F
+        border-color @color    

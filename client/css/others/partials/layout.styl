@@ -1,0 +1,64 @@
+
+// 全局样式
+@require "../../partials/global"
+
+// 布局样式
+@require "../../partials/layout"
+
+// 网格布局
+@require "../../partials/cssgrids"
+
+.content
+  background #F3F5F9
+
+  .banner
+    height 408px
+    background #000000 url($CDN_PATH/images/others/banner.png) no-repeat center center
+
+  .main
+    width $pageWidth
+    padding 20px 0
+    margin 0 auto
+
+    & > .nav, & > .substance
+      vertical-align top
+      display inline-block
+      background-color #fff
+
+    & > .nav
+      padding 0 10px
+      margin-top -1px
+      overflow: hidden
+      
+      li
+        width 160px
+        height 48px
+        line-height @height
+        border-top 1px solid #F3F5F9
+        text-align: center
+        a
+          font-size: 16px
+          color: #787878
+          display block
+        &.active > a
+          color: #0ABBB9
+          font-weight: 600
+
+    & > .substance
+      width 1000px
+      margin-left 20px
+      & > h1
+        font-size: 36px
+        color: #333333
+        line-height: 42px
+        padding 45px 0 10px 0
+        margin 0 auto
+        overflow visible
+        white-space nowrap
+        text-align center
+        letter-spacing: 5px
+      .underline
+        margin 0 auto
+        width 80px
+        height 0
+        border-bottom 1px solid #979797

@@ -1,0 +1,81 @@
+extends ../partials/layout
+
+append css
+  link(rel='stylesheet', type='text/css', href=`${CONTEXT_PATH}/css/tech-travel/services.css?v=${VERSION}`)
+
+append js
+  script(src=`${CONTEXT_PATH}${DYN_JS_PATH}tech-travel/services.js?v=${VERSION}`)
+
+block header
+  +nav({ active: 2,logo:'tech-travel' })
+
+mixin article(items)
+  each item in items
+    .row.yui3-g
+      label.yui3-u= item.label
+      .yui3-u.sub-ctt
+        if Array.isArray(item.value)
+          each item2 in item.value
+            if typeof item2 === 'object'
+              dl.items.yui3-u-1-4
+                dt= item2.label
+                each item3 in item2.value
+                  dd= item3
+            else
+              em= item2
+        else
+          p= item.value
+
+block content
+  .content
+    .banner
+      .banner-wrapper
+        .banner-content
+          h1 蜘蛛智游行
+          p 
+            | 全域旅游智慧解决方案
+    .main
+      .tab-header
+        ul.tabs#tabs-bar
+          li(class={active: currentPath === '/tech-travel/services.html'}, data-rel='#emall')
+            h2 全域旅游电商
+            p 平台系统
+          li(class={active: currentPath === '/tech-travel/services/distribution.html'}, data-rel='#distribution')
+            h2 旅游分销
+            p 平台系统
+          li(class={active: currentPath === '/tech-travel/services/government.html'}, data-rel='#government')
+            h2 政府公共服务
+            p 平台系统
+      #emall.yui3-g.hidden(class={restore: currentPath === '/tech-travel/services.html'})
+        .left.yui3-u
+          .intro.icon-01
+            p
+              | 全域旅游
+              br/
+              | 电商运营平台系统
+            h2 免费
+        .right.yui3-u
+          .list
+            +article(eMall)
+
+      #distribution.yui3-g.hidden(class={restore: currentPath === '/tech-travel/services/distribution.html'})
+        .left.yui3-u
+          .intro.icon-02
+            p
+              | 旅游分销平台系统
+            h2 免费
+        .right.yui3-u
+          .list
+            +article(distribution)
+
+      #government.yui3-g.hidden(class={restore: currentPath === '/tech-travel/services/government.html'})
+        .left.yui3-u
+          .intro.icon-03
+            p
+              | 政服公共服务
+              br/
+              | 平台系统
+            h2 定制服务
+        .right.yui3-u
+          .list
+            +article(government)

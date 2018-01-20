@@ -1,0 +1,26 @@
+extends ./index
+
+block css
+  link(rel='stylesheet', type='text/css', href=`${CONTEXT_PATH}/css/others/culture.css?v=${VERSION}`)
+
+block otherNav
+  +otherNav(3)
+
+block substance
+  h1 企业文化
+  .underline
+  .wrapper
+    .part-01
+      h2 主人翁精神
+      p
+        | 希望每一位员工都有主人翁精神，深刻认同自己的工作价值，明白个人和公司的命运息息相关。
+    .part-02
+      h2 顺不骄 逆不馁
+      p
+        | 无论环境顺逆，始终坚持信念，向内寻找动力，向外寻找帮助。持续努力奋斗，才能获得机遇和成功。
+    .part-03
+      h2 接受现实才能改变现实
+      .underline
+      p
+        | 希望每一位员工都能积极乐观的面对工作和生活，用自己平凡的付出造就不平凡的事业。
+

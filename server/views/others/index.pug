@@ -1,0 +1,78 @@
+extends ../partials/layout
+
+append css
+  link(rel='stylesheet', type='text/css', href=`${CONTEXT_PATH}/css/others/index.css?v=${VERSION}`)
+
+block header
+  +nav({ active: 3 })
+
+mixin otherNav(active)
+  ul.nav
+    each item,index in OTHER_NAV
+      li(class={ active: active === index })
+        a(href=CONTEXT_PATH+item.path)= item.name
+
+block content
+  .content
+    .banner
+    .main
+      block otherNav
+        +otherNav(0)
+      .substance
+        block substance
+          h1 公司简介
+          .underline
+          .wrapper
+            img(width=380, height=230, src=`${CDN_PATH}/images/others/introduction/reception.png`).img01
+
+            p
+              | 蜘蛛旅游网于2014年8月在深圳成立，隶属于深圳市蜘蛛旅游网络技术有限公司。
+            
+            h2
+              | 以“提升旅游行业效率，直连酒店和最终客户”为企业己任
+            
+            p.w535
+              | 蜘蛛旅游网以“提升旅游行业效率，直连酒店和最终客户”为企业己任，致力于帮助酒店建立全渠道的自主直销平台，最终建立服务于酒店各类型客户的互联网平台。产品服务涵盖旅游和住宿行业各环节，包括企业差旅服务、酒店渠道直销、旅游资源整合等业务形态。通过软件技术和智能硬件创新，打造酒店和客户直连生态圈，整合价值链，为酒店的最终客户提供更加轻松满意的出行体验。
+            
+            p
+              em 上游：&nbsp;
+              | 作为旅游资源集成商（景区 酒店 餐厅 购物商超），打造直连用户和供应商的全域直销平台。
+              br/
+              em 中游：&nbsp;
+              | 为酒店提供一站式全渠道直销运营管理平台，帮助酒店链接最终客户。
+              br/
+              em 下游：&nbsp;
+              | 为企业用户提供优质的差旅管理服务，以市场最优价直采酒店资源，管控差旅成本。
+            
+            h2
+              | 以“自助、自主、知足”为公司理念
+            
+            p
+              | 希望用户通过蜘蛛旅游网提供的自助式互联网旅游服务，
+              br/
+              | 享受到自主而愉悦的旅游体验，将知足常乐的人文情怀传递给社会。
+
+            h2
+              | 行业愿景
+
+            p
+              | 成为中国领先的在线旅游服务提供商
+
+          .categories
+            .yui3-g
+              .yui3-u-1-3
+                .item.icon-01
+                  h2 互联网基因
+                  p
+                    | 蜘蛛旅游网拥有行业顶尖的技术团队力量，经验丰富的互联网运营销售团队。目前团队人数为120人，30%以上为产品研发团队。10%具有BAT行业背景。
+              .yui3-u-1-3
+                .item.icon-02
+                  h2 创新血液
+                  p
+                    | 蜘蛛旅游网勇于探索商业新模式，追求行业更高效率，更简流程，更高利润。2014年蜘蛛旅游网在酒店直销行业独创反向定价-交易撮合模式，获得行业“旅游创新50强”荣誉称号。
+              .yui3-u-1-3
+                .item.icon-03
+                  h2 技术驱动
+                  p
+                    | 蜘蛛旅游网致力于用技术提升行业效率，创建至今，获得多项软件著作专利。
+              

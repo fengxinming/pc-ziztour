@@ -1,0 +1,32 @@
+extends ./index
+
+block css
+  link(rel='stylesheet', type='text/css', href=`${CONTEXT_PATH}/css/others/contact.css?v=${VERSION}`)
+
+block otherNav
+  +otherNav(6)
+
+block substance
+  h1 联系我们
+  .underline
+  .part-01
+    .yui3-g
+      .yui3-u-1-2
+        .item.icon-01
+          h2 客服电话
+          p.p-01 HOTLINE
+          p.p-02 400-0780-009
+      .yui3-u-1-2
+        .item.icon-02
+          h2 电子邮箱
+          p.p-01 E-MAIL
+          p.p-02 op@ziztour.com
+  .part-02.yui3-g
+    .qr-code.yui3-u
+      img(height=133, src=CDN_PATH+'/images/partials/qr_code.png', alt=TITLE)
+      p 关注“蜘蛛旅游”更多动态
+    ul.yui3-u
+      li 公司名称：深圳市蜘蛛旅游网络技术有限公司
+      li 企业传真：0755-83074541
+      li 推广热线：0755-83900056
+      li 公司地址：深圳市南山区马家龙大新路海大创意园东座南门4楼

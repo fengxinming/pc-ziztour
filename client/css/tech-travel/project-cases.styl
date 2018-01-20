@@ -1,0 +1,110 @@
+
+// 全局样式
+@require "../partials/global"
+
+// 布局样式
+@require "../partials/layout"
+
+.content
+  background #fff
+
+  .banner
+    height 602px
+    background url($CDN_PATH/images/tech-travel/project-cases-banner.png) no-repeat center center
+    .banner-wrapper
+      position relative
+      margin 0 auto
+      width $pageWidth
+      height 100%
+      .banner-content
+        position absolute
+        top 153px
+        left 80px
+        h1
+          margin 0
+          font-size: 50px
+          color: #FFFFFF
+          letter-spacing: 4px
+          line-height: 70px
+          text-shadow: 0 2px 4px rgba(0,0,0,0.18)
+          font-weight 600
+        p
+          line-height 30px
+          color #FFFFFF
+          font-size 13px
+          margin-top 4px
+        .icon-wrapper
+          margin-top 30px
+          .icon-01,
+          .icon-02,
+          .icon-03
+            display inline-block
+            vertical-align top
+            background-repeat no-repeat
+            background-position center center
+            font-size: 14px
+            color: #FFFFFF
+            height 84px
+            margin-right 88px
+            text-align center
+            line-height: 180px
+          .icon-01
+            background-image inline-url('/images/tech-travel/tb-icon-01.svg')
+          .icon-02
+            background-image inline-url('/images/tech-travel/tb-icon-02.svg')
+          .icon-03
+            background-image inline-url('/images/tech-travel/tb-icon-03.svg')
+      .macbook
+        position absolute
+        right 50px
+        bottom -18px
+  .main
+    width $pageWidth
+    margin 0 auto
+
+    .headline
+      margin 0 auto
+      width 1120px
+      h2
+        font-size: 36px
+        color: #333
+        line-height: 42px
+        font-weight 600
+      p
+        opacity: 0.8
+        font-size: 20px
+        color: #333
+
+    .part-01
+      background url($CDN_PATH/images/tech-travel/categories-tree.png) no-repeat center 310px
+      padding 130px 0 0 0
+      height 1130px
+    .part-02
+      background url($CDN_PATH/images/tech-travel/solution.png) no-repeat center 180px
+      background-size contain
+      height 1190px
+    .part-03
+      height 650px
+      background url($CDN_PATH/images/tech-travel/supports-bg.png) no-repeat 787px 80px
+      .list
+        width 683.5px
+        li
+          height 90px
+          line-height @height
+          border-bottom 1px solid #D8D8D8
+          &.last
+            border-bottom 0 none
+          & > span, & > label
+            font-size 15px
+            color #787878
+          & > label
+            display inline-block
+            width: 166px
+            text-align: right
+            padding-right 31px
+          & > em
+            font-size 16px
+            color #333333
+            display inline-block
+            min-width 80px
+            font-weight 600

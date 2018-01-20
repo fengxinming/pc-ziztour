@@ -1,0 +1,56 @@
+extends ./index
+
+block css
+  link(rel='stylesheet', type='text/css', href=`${CONTEXT_PATH}/css/others/team.css?v=${VERSION}`)
+
+append js
+  script(src=`${CONTEXT_PATH}${DYN_JS_PATH}others/team.js?v=${VERSION}`)
+
+block otherNav
+  +otherNav(5)
+
+block substance
+  .wrapper
+    .part-01.yui3-g
+      .yui3-u
+        img(src=`${CDN_PATH}/images/others/team/smile.png`, alt=TITLE, width=253, height=265)
+      .yui3-u.intro
+        h1 欢迎加入蜘蛛旅游网
+        p
+          | 如果你是怀抱互联网梦的旅游行业资深人士，请加入我们
+          br/
+          | 如果你是互联网行业的旅游爱好者，请加入我们
+          br/
+          | 有意者致电0755-83900056，或注明应聘岗位发送简历至hr@ziztour.com
+
+    .part-02
+      #tabs-bar.tab-header
+        each item in recruitments
+          a(class={active: item.active}, href='javascript:;', data-rel='#' + item.id)= item.label
+      each item, index in recruitments
+        div(id=item.id, class={ hidden: !item.active })
+          each item2 in item.value
+            .recruitment-info
+              h2.headline.yui3-g
+                em.yui3-u-1-2= item2.label
+                em.yui3-u-1-2.release-time= item2.releaseTime
+              .profile.yui3-g
+                each item3 in item2.introductions
+                  em.yui3-u-1-2= item3
+              each item3 in item2.responsibilities    
+                dl.requirement
+                  dt= item3.label
+                  each item4 in item3.value
+                    dd= item4
+
+      //- .paging-bar
+      //-   span.paging-info 共100条记录
+      //-   input.paging-button(type='button', value=' ')
+      //-   input.paging-button.active(type='button', value=1)
+      //-   input.paging-button(type='button', value=2)
+      //-   input.paging-button(type='button', value=3)
+      //-   input.paging-button(type='button', value=4)
+      //-   input.paging-button(type='button', value=5)
+      //-   input.paging-button(type='button', value=' ')
+      //-   input.text-field(type='text', maxlength=3)
+      //-   input.jump(type='button', value='跳转')

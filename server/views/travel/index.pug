@@ -1,0 +1,177 @@
+extends ../partials/layout
+
+append css
+  link(rel='stylesheet', type='text/css', href=`${CONTEXT_PATH}/css/travel/index.css?v=${VERSION}`)
+
+
+block header
+  +nav({ active: 1 ,logo:'travel'})
+
+
+
+block content
+  #app
+
+    - var regLink = 'http://b.ziztour.com/guide/login.html';
+
+    .banner-wrap
+      .banner-img
+        img(src=CDN_PATH + "/images/travel/banner.jpg")
+      .title-img
+        img(src=CDN_PATH + "/images/travel/title.png")
+      .link-area
+        a.link-button(href=regLink,target="_blank") 即刻加入 立即省钱
+      ul.referral-wrap
+        each val, index in referrals
+          li.referral
+            .referral-content
+              img.referral-icon(src=CDN_PATH + "/images/travel/referral-" + (index + 1) + ".svg",alt=TITLE)
+              .referral-msg
+                p.preferral-text!= val.msg
+                .line
+            h4= val.title
+    .content-wrap
+      .core-function-wrap
+        .core-function.global-center
+          .title-img
+            img(src=CDN_PATH + "/images/travel/text1.png")
+          ul.travel-list
+            each item, index in travelData
+              li.travel-details(class={'details-last':index ===7,'details-normal':index !==7})
+                h2= item.title
+                .details-content
+                  if item.caption
+                    h3= item.caption
+                  if item.msg
+                    h4= item.msg
+                  ul.details-list
+                    each val in item.options
+                      li!= val
+                  if item.link
+                    a.button-link(href=regLink,target="_blank") 免费注册
+      .member-equity-wrap
+        .member-equity.global-center
+          .title-img
+            img(src=CDN_PATH + "/images/travel/text2.png")
+          ul.member-list
+            each item, index in memberData
+              li.member-details.hover-scale
+                .member-img
+                  if !(index-1)
+                    img(src=CDN_PATH + "/images/travel/member-"+ (index+1) +".png")
+                  else
+                    img(src=CDN_PATH + "/images/travel/member-"+ (index+1) +".svg",alt=TITLE)
+                .details-content
+                  ul.details-list
+                    each val in item.options
+                      li= val
+                  .details-bottom
+                    h2=item.title
+                    h3= item.msg
+                    a.link-button(href=PC_TRAVEL_PATH + item.path,target="_blank")= item.text
+      .member-weal-wrap
+        .member-weal.global-center
+          .title-img
+            img(src=CDN_PATH + "/images/travel/text3.png")
+          -
+            var wealList = [{
+                title: '免费下午茶',
+                guide: '白金会员 黄金会员专享',
+                msg: '60人以上企业<br>免费申请送礼上门'
+              },{
+              title: '香辣小龙虾',
+              guide: '白金会员 黄金会员专享',
+              msg: '100人以上企业<br>免费申请送礼上门<br>（人手一份）'
+              },{
+              title: '学车优惠',
+              guide: '白金会员 黄金会员专享',
+              msg: '100人以上企业<br>免费申请上门办理<br>（协议价）'
+              },{
+              title: '手机贴膜服务',
+              guide: '白金会员 黄金会员专享',
+              msg: '60人-150人以上企业<br>免费申请上门服务'
+              },{
+              title: '高端牙科服务',
+              guide: '全部会员',
+              msg: '100人以上企业<br>免费申请上门服务'
+              }] ;
+
+          ul.weal-list
+            each item,index in wealList
+              li.weal-details.hover-scale
+                .details-content
+                  img(src=CDN_PATH + "/images/travel/fl"+ (index+1) +".png")
+                  .details-mask
+                    h5=item.guide
+                    p!=item.msg
+                h3=item.title
+      .serve-case-wrap
+        .serve-case.global-center
+          .title-img
+            img(src=CDN_PATH + "/images/travel/text4.png")
+            ul.case-list
+              -
+                var caseList = [{
+                site:'深圳',
+                industry: '金融行业',
+                title: '解决资金压力',
+                before: '深圳某金融公司，经常组织全国性金融发布会议，差旅量20万/月，由公司几个行政员工替全体员工预订，公司预借备用金，然后报销。',
+                after: '使用蜘蛛差旅后省去了预借备用金和报销的流程，缓解了员工和公司资金压力，效率大大提高，使用在线审批后，逐步改为员工自己预订。行政部员工转岗HR，负责公司扩张招聘。'
+                },{
+                site:'广州',
+                industry: '汽车行业',
+                title: '节省人力成本',
+                before: '广州某公司全国有100多家汽车4S店，每月差旅费用7万左右，原由3位行政同事帮全体员工代订，因担心员工自己订存在不合规等情况。',
+                after: '使用蜘蛛差旅后，原3位行政同事减为1位行政管理差旅事务，仅人力成本节省约10,000元/月。该公司计划将蜘蛛差旅推广至全国分公司使用，并和蜘蛛合作发行4S店会员卡，为其他蜘蛛差旅用户送福利。'
+                },{
+                site:'北京',
+                industry: '医疗行业',
+                title: '降低会议成本',
+                before: '北京某医疗公司是香港上市企业，每月差旅费用10万，每次行业会议需跨部门3人小组协作订机酒，多方比价效率低，退改签转繁琐。',
+                after: '使用蜘蛛差旅后，通过蜘蛛强大的旅行社资源以市场最低价采购团队机票和酒店。并得到蜘蛛团队全程协助筹备会议和策划执行，工作小组由3人削减至1人，大幅降低会议采购成本和人力成本。'
+                }] ;
+              each item,index in caseList
+                li.weal-details.hover-scale
+                  .use-before
+                    .weal-site
+                      span= item.site
+                    h3= item.industry
+                    p= item.before
+                  .use-after
+                    h2= item.title
+                    p= item.after
+
+      .more-gift-wrap
+        .more-gift.global-center
+          .title-img
+            img(src=CDN_PATH + "/images/travel/text5.png")
+          -
+            var giftList = [{
+            title: '免费领机票',
+            msg : '注册即送1000元机票<br>激活即可使用<br>（仅限企业用户）',
+            guide: '去注册'
+            },{
+            title: '下单有礼',
+            msg: '每次下单均有现金奖励<br>单笔奖励最高20元<br>（微信服务号红包发送）',
+            guide: '去下单'
+            },{
+            title: '更多好礼',
+            msg: '公司设置、新同事加入均有现金好礼<br>单笔奖励最高20元<br>（微信服务号红包发送）',
+            guide: '去注册'
+            }] ;
+          ul.gift-list
+            each item,index in giftList
+              li.gift-details.hover-scale
+                h3= item.title
+                img(src=CDN_PATH + "/images/travel/gift-" + (index + 1) + ".png")
+                p!= item.msg
+                a.link-button(href=regLink,target="_blank")= item.guide
+
+
+
+
+
+
+
+
+
